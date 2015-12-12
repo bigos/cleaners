@@ -23,18 +23,53 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+gem 'puma'
+gem 'active_model_serializers'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'capistrano'
+  gem 'capistrano-secrets-yml'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano3-puma'
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+  gem 'rails-erd'
+  gem 'pry-rails'
+  gem 'pry-theme'
+  gem 'quiet_assets'
+  gem 'rubocop', require: false
+end
 
+group :test, :development do
+  gem 'byebug'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 3.2'
+
+  gem 'cucumber-rails', require: false
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
+end
+
+group :test do
+  gem 'shoulda', '>= 3.0.1'
+  gem 'factory_girl'
+end
+
+gem 'strip_attributes'
+gem 'jc-validates_timeliness'
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+gem 'simple_form'
+gem 'rails4-autocomplete'
+gem 'jquery-ui-rails'
+gem 'modernizr-rails'
+gem 'paperclip', '~> 4.1'
