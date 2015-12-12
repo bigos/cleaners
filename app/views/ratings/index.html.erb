@@ -15,8 +15,8 @@
     <% @ratings.each do |rating| %>
       <tr>
         <td><%= rating.number %></td>
-        <td><%= rating.submitting_user %></td>
-        <td><%= rating.subject_user %></td>
+        <td><%= rating.submitting_user_id %></td>
+        <td><%= rating.subject_user_id %></td>
         <td><%= rating.comment %></td>
         <td><%= link_to 'Show', rating %></td>
         <td><%= link_to 'Edit', edit_rating_path(rating) %></td>

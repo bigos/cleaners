@@ -11,6 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20151212152116) do
+
+  create_table "ratings", force: true do |t|
+    t.integer  "number"
+    t.integer  "submitting_user_id"
+    t.integer  "subject_user_id"
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
