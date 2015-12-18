@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212152116) do
+ActiveRecord::Schema.define(version: 20151218220842) do
 
   create_table "ratings", force: true do |t|
     t.integer  "number"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20151212152116) do
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longtitude"
   end
 
 end
