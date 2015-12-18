@@ -73,3 +73,7 @@ gem 'rails4-autocomplete'
 gem 'jquery-ui-rails'
 gem 'modernizr-rails'
 gem 'paperclip', '~> 4.1'
+
+# https://github.com/apneadiving/Google-Maps-for-Rails
+gem 'gmaps4rails'
+gem 'underscore-rails'

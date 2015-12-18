@@ -112,6 +112,7 @@ GEM
     ffi (1.9.10)
     gherkin (2.12.2)
       multi_json (~> 1.3)
+    gmaps4rails (2.1.2)
     hike (1.2.3)
     i18n (0.7.0)
     jbuilder (2.3.2)
@@ -277,6 +278,7 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    underscore-rails (1.8.3)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -304,6 +306,7 @@ DEPENDENCIES
   datetimepicker-rails!
   factory_girl
   factory_girl_rails
+  gmaps4rails
   jbuilder (~> 2.0)
   jc-validates_timeliness
   jquery-rails
@@ -331,6 +334,7 @@ DEPENDENCIES
   strip_attributes
   turbolinks
   uglifier (>= 1.3.0)
+  underscore-rails
   web-console (~> 2.0)
 
 BUNDLED WITH
