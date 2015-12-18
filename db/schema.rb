@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20151218220842) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "latitude"
-    t.float    "longtitude"
+    t.float    "longitude"
   end
 
 end
