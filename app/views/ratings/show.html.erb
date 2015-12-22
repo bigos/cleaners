@@ -22,3 +22,22 @@
 
 <%= link_to 'Edit', edit_rating_path(@rating) %> |
 <%= link_to 'Back', ratings_path %>
+
+<hr>
+<p>
+  <div style="width: 800px;">
+    <div id="map" style="width: 800px; height: 800px">
+  </div>
+</p>
+
+<script>
+ handler = Gmaps.build('Google');
+ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+   markers = handler.addMarkers(<%= raw(@hash.to_json) %> );
+   handler.bounds.extendWith(markers);
+   handler.fitMapToBounds();
+   handler.getMap().setZoom(16);
+ });
+
+ markers = handler.addMarkers(<%=raw @hash.to_json %>);
+</script>

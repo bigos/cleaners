@@ -14,6 +14,10 @@ class RatingsController < ApplicationController
   # GET /ratings/1
   # GET /ratings/1.json
   def show
+    @hash = Gmaps4rails.build_markers(@rating) do |rating, marker|
+      marker.lat rating.latitude
+      marker.lng rating.longitude
+    end
   end
 
   # GET /ratings/new
