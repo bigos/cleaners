@@ -8,6 +8,8 @@ class RatingsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@ratings) do |rating, marker|
       marker.lat rating.latitude
       marker.lng rating.longitude
+
+      marker.json({:name => rating.id.to_s, infowindow: "#{rating.comment} <a href='/ratings/#{rating.id}'>See</a> " })
     end
   end
 
@@ -17,6 +19,7 @@ class RatingsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@rating) do |rating, marker|
       marker.lat rating.latitude
       marker.lng rating.longitude
+      marker.json({:id => rating.id })
     end
   end
 
