@@ -24,6 +24,11 @@
 <%= link_to 'Back', ratings_path %>
 
 <hr>
+
+<% # useful link https://github.com/joshcrews/google-directions-ruby %>
+
+<%= link_to 'Show on Google Maps', "http://maps.google.com/maps?q=#{@rating.coordinates}&z=14" %>
+
 <p>
   <div style="width: 800px;">
     <div id="map" style="width: 800px; height: 800px">
